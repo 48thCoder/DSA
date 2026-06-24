@@ -15,7 +15,7 @@ public:
         return count;
     }
 };
-// Time Complexity: O(d) where, d is the no. of digits
+// Time Complexity: O(d) where, d is the no. of digits ~ O(log10(n)) due to n /= 10
 // Space Complexity: O(1)
 
 // OPTIMAL SOLUTION
