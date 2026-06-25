@@ -18,5 +18,5 @@ public:
     }
 };
 
-// Time Complexity: O(d) where, d is the no. of digits
+// Time Complexity: O(d) where, d is the no. of digits ~ O(log10(n))
 // Space Complexity: O(1)
