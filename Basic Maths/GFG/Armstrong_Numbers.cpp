@@ -14,5 +14,5 @@ class Solution {
 	}
 };
 
-// Time Complexity: O(d), where d -> No. of digits ~ O(log10(n) + 1)
+// Time Complexity: O(d), where d -> No. of digits ~ O(log10(n))
 // Space Complexity: O(1)
