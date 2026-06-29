@@ -1,4 +1,4 @@
-// Given a positive integer n, The task is to find the value of Σi F(i) where i is from 1 to n and function F(i) is defined as the sum of all divisors of i.
+// Given a positive integer n. The task is to find the value of Σi F(i), where i is from 1 to n and the function F(i) is defined as the sum of all divisors of i.
 
 // BRUTE FORCE APPROACH
 class Solution {
@@ -15,7 +15,7 @@ class Solution {
 		return sum;
 	}
 };
-// Time Complexity: O(n^2)
+// Time Complexity: O(n²)
 // Space Complexity: O(1)
 
 // OPTIMAL SOLUTION
