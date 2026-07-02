@@ -9,16 +9,15 @@
 // 1) Iterative Method:
 class Solution {
 	public:
-	string reverse(const string& S) {
-		string result = S;
-		int n = result.size();
+	string reverse(string& S) {
+		int n = S.size();
 		for (int i = 0; i < n; i++) {
 			if (i == n/2) {
 				break;
 			}
-			swap(result[i], result[n - i - 1]);
+			swap(S[i], S[n - i - 1]);
 		}
-		return result;
+		return S;
 	}
 };
 // Time Complexity: O(n)
@@ -27,23 +26,22 @@ class Solution {
 // 2) String Reversal Method:
 class Solution {
 	public:
-	string reverse(const string& S) {
+	string reverse(string& S) {
 		string result(S.rbegin(), S.rend());
 		return result;
 	}
 };
 // Time Complexity: O(n)
-// Space Complexity: O(1)
+// Space Complexity: O(n)
 
 // 3) Using Built-in Function:
 #include <bits/stdc++.h>
 
 class Solution {
 	public:
-	string reverse(const string& S) {
-		string result = S;
-		std::reverse(result.begin(), result.end());
-		return result;
+	string reverse(string& S) {
+		std::reverse(S.begin(), S.end());
+		return S;
 	}
 };
 // Time Complexity: O(n)
@@ -52,15 +50,14 @@ class Solution {
 // 4) Two Pointer Approach:
 class Solution {
 	public:
-	string reverse(const string& S) {
-		string result = S;
-		int l = 0, r = result.size() - 1;
+	string reverse(string& S) {
+		int l = 0, r = S.size() - 1;
 		while (l < r) {
-			swap(result[l], result[r]);
+			swap(S[l], S[r]);
 			l++;
 			r--;
 		}
-		return result;
+		return S;
 	}
 };
 // Time Complexity: O(n)
@@ -77,10 +74,9 @@ class Solution {
 		reverseStr(S, i + 1, n);
 	}
 	
-	string reverse(const string& S) {
-		string result = S;
-		reverseStr(result, 0, result.size());
-		return result;
+	string reverse(string& S) {
+		reverseStr(S, 0, S.size());
+		return S;
 	}
 };
 // Time Complexity: O(n)
@@ -97,10 +93,9 @@ class Solution {
 		reverseStr(S, l + 1, r - 1);
 	}
 	
-	string reverse(const string& S) {
-		string result = S;
-		reverseStr(result, 0, result.size() - 1);
-		return result;
+	string reverse(string& S) {
+		reverseStr(S, 0, S.size() - 1);
+		return S;
 	}
 };
 // Time Complexity: O(n)
