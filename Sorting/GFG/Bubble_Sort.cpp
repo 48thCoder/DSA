@@ -36,5 +36,25 @@ class Solution {
 		}
 	}
 };
-// Time Complexity: O(n) -> For Best Case
+// Time Complexity: O(n) -> Best Case, O(n²) -> Avg. & Worst Case
 // Space Complexity: O(1)
+
+// USING RECURSION
+void bubbleSort(int arr[], int n) {
+    if (n == 1) {
+		return;
+	}
+    int didSwap = 0;
+    for (int j = 0; j <= n - 2; j++) {
+        if (arr[j] > arr[j + 1]) {
+            swap(arr[j], arr[j + 1]);
+            didSwap = 1;
+        }
+    }
+    if (didSwap == 0) {
+		return;
+	}
+    bubbleSort(arr, n - 1);
+}
+// Time Complexity: O(n) -> Best Case, O(n²) -> Avg. & Worst Case
+// Space Complexity: O(n)
