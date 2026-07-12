@@ -1,5 +1,23 @@
 // Given an array of integers called nums, sort the array in non-decreasing order using the insertion sort algorithm and return the sorted array.
 
+// USING RECURSION
+void insertion_sort(int arr[], int i, int n) {
+    if(i == n) {
+        return;
+    }
+    
+    int j = i;
+    while(j > 0 && arr[j - 1] > arr[j]) {
+        swap(arr[j], arr[j - 1]);
+        j--;
+    }
+
+    insertion_sort(arr, i + 1, n);
+}
+// Time Complexity: O(n) -> Best Case, O(n²) -> Avg. & Worst Case
+// Space Complexity: O(n)
+
+// ITERATIVE APPROACH
 class Solution {
 public:
     vector<int> insertionSort(vector<int>& nums) {
@@ -14,6 +32,5 @@ public:
         return nums;
     }
 };
-
 // Time Complexity: O(n) -> Best Case, O(n²) -> Avg. & Worst Case
 // Space Complexity: O(1)
