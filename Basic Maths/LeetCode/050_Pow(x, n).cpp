@@ -2,17 +2,15 @@
 
 // BRUTE FORCE APPROACH -> TLE
 class Solution {
-    public double myPow(double x, int n) {
+public:
+    double myPow(double x, int n) {
         double ans = 1;
-        if (n < 0) {
-            x = 1 / x;
-        }
-        n = Math.abs(n);
-        for (int i = 1; i <= n; i++) {
+        long long N = abs(long(long(n)));
+        for (long long i = 0; i < N; i++) {
             ans *= x;
         }
-        return ans;
+        return n > 0 ? ans : 1 / ans;
     }
-}
+};
 // Time Complexity: O(n)
 // Space Complexity: O(1)
