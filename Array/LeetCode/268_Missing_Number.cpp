@@ -61,7 +61,7 @@ public:
     }
 };
 // Time Complexity: O(n log n) + O(n) ~ O(n log n)
-// Space Complexity: O(n)
+// Space Complexity: O(1)
 
 // USING MATHEMATICAL FORMULA
 class Solution {
