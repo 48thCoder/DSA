@@ -43,3 +43,38 @@ public:
 };
 // Time Complexity: O(n log n) + O(n) ~ O(n log n)
 // Space Complexity: O(1)
+
+// USING HASH MAP
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        unordered_map<int, int> freq;
+        for (int x : nums) {
+            freq[x]++;
+        }
+
+        for (auto& [x, count] : freq) {
+            if (count == 1) {
+                return x;
+            }
+        }
+        return -1;
+    }
+};
+// Time Complexity: O(n) + O(n) ~ O(n + n) ~ O(n)
+// Space Complexity: O(n)
+
+// OPTIMAL SOLUTION (Using XOR)
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+        int n = nums.size();
+        int x = 0;
+        for (int i = 0; i < n; i++) {
+            x ^= nums[i];
+        }
+        return x;
+    }
+};
+// Time Complexity: O(n)
+// Space Complexity: O(1)
