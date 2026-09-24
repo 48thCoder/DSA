@@ -42,7 +42,7 @@ public:
     }
 };
 // Time Complexity: O(n log n) + O(n) ~ O(n log n)
-// Space Complexity: O(1)
+// Space Complexity: O(1) or O(n)
 
 // USING HASH MAP
 class Solution {
