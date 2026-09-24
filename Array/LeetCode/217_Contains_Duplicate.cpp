@@ -33,7 +33,7 @@ public:
     }
 };
 // Time Complexity: O(n log n)
-// Space Complexity: O(n)
+// Space Complexity: O(1) or O(n)
 
 // OPTIMAL SOLUTION (Hash Table)
 class Solution {
